@@ -5,11 +5,19 @@
 //     URL: https://github.com/RobTillaart/TwoWireSW
 
 
+
+//  NEED TO MAKE ALL TWOWIRE VIRTUAL
+//  SEE  - https://github.com/RobTillaart/TwoWireSW/issues/1
+
+
+
+
 #include "TwoWireSW.h"
 #include "Wire.h"
 #include "SHT31.h"
 
-TwoWireSW twsw(6,7);
+SoftwareWire sw(6,7)
+TwoWireSW twsw(&sw);
 
 #define SHT31_ADDRESS   0x44
 SHT31 sht;

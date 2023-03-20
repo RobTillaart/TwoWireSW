@@ -9,6 +9,13 @@
 //     URL: https://github.com/Testato/SoftwareWire
 
 
+
+//  NEED TO MAKE ALL TWOWIRE VIRTUAL
+//  SEE  - https://github.com/RobTillaart/TwoWireSW/issues/1
+
+
+
+
 #include "Arduino.h"
 #include "Wire.h"
 #include "SoftwareWire.h"
@@ -23,9 +30,9 @@ public:
   //
   //  CONSTRUCTOR
   //
-  TwoWireSW(uint8_t SCL, uint8_t SDA)
+  TwoWireSW(SoftwareWire *sw) : TwoWire()
   {
-    _wire = new SoftwareWire(SCL, SDA);
+    _wire = sw;
   };
   ~TwoWireSW(){};
 
@@ -61,7 +68,7 @@ public:
     _wire->setClock(clock);
   };
   void setWireTimeout(uint32_t timeout = 25000, bool reset_with_timeout = false){};
-  bool getWireTimeoutFlag(void){};
+  bool getWireTimeoutFlag(void){ return true; };
   void clearWireTimeoutFlag(void){};
 
 
@@ -69,22 +76,32 @@ public:
   //
   //  TRANSMISSION
   //
+
+
   void beginTransmission(uint8_t address)
   {
     _wire->beginTransmission(address);
+    //  Serial.print("ADDR1:");
+    //  Serial.print(address);
   };
+  using TwoWire::beginTransmission;
   void beginTransmission(int address)
   {
     _wire->beginTransmission(address);
+    //  Serial.print("ADDR2:");
+    //  Serial.print(address);
   };
+  using TwoWire::endTransmission;
   uint8_t endTransmission(void)
   {
-    return endTransmission(true);
+    //  Serial.print("ET1:");
+    return _wire->endTransmission(true);
   };
   uint8_t endTransmission(uint8_t sendStop)
   {
-    _wire->endTransmission(sendStop);
-  }
+    //  Serial.print("ET2:");
+    return _wire->endTransmission(sendStop);
+  };
 
 
   //////////////////////////////////////////////////
@@ -117,27 +134,27 @@ public:
   //
   //  STREAM INTERFACE
   //
-  virtual size_t write(uint8_t data)
+  size_t write(uint8_t data)
   {
     return _wire->write(data);
   };
-  virtual size_t write(const uint8_t *data, size_t quantity)
+  size_t write(const uint8_t *data, size_t quantity)
   {
     return _wire->write(data, quantity);
   };
-  virtual int available(void)
+  int available(void)
   {
     return _wire->available();
   };
-  virtual int read(void)
+  int read(void)
   {
     return _wire->read();
   };
-  virtual int peek(void)
+  int peek(void)
   {
     return _wire->peek();
   };
-  virtual void flush(void){};
+  void flush(void){};
 
   void onReceive(void (*function)(int n) ){};
   void onRequest(void (*function)(void) ){};

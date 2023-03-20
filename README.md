@@ -1,7 +1,7 @@
 
 # TwoWireSW
 
-Wrapper class for SoftwareWire (experimental)
+Wrapper class for SoftwareWire (experimental ==> not possible)
 
 ## Description
 
@@ -28,7 +28,15 @@ however since version 1.6.0 this interface has been removed.
 - AsyncDelay
 
 
+## Conclusion
+
+It is possible to write the wrapper class, but impossible to use that as an instance
+for TwoWire as the main functions of Twowire are not virtual. (See issue #1).
+
+
 ## Status
 
 2023-03-15 - not working
+2023-03-20 - not possible to work => see discussion in issue #1
+
 
