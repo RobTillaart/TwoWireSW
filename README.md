@@ -36,7 +36,7 @@ for TwoWire as the main functions of Twowire are not virtual. (See issue #1).
 
 ## Status
 
-2023-03-15 - not working
-2023-03-20 - not possible to work => see discussion in issue #1
+- 2023-03-15 - not working
+- 2023-03-20 - not possible to work => see discussion in issue #1
 
 
