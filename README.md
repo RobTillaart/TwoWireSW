@@ -13,6 +13,10 @@ TODO: include when working.
 ```
 
 
+Arduino-lint is failing as library is not registered.
+
+
+
 # TwoWireSW
 
 TwoWire interface wrapper around SoftwareWire (experimental ==> not possible)
