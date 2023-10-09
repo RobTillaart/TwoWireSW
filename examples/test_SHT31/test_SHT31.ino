@@ -16,7 +16,7 @@
 #include "Wire.h"
 #include "SHT31.h"
 
-SoftwareWire sw(6,7)
+SoftwareWire sw(6,7);
 TwoWireSW twsw(&sw);
 
 #define SHT31_ADDRESS   0x44
@@ -59,4 +59,3 @@ void loop()
 
 
 // -- END OF FILE --
-
