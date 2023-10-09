@@ -1,5 +1,5 @@
 //
-//    FILE: test.ino
+//    FILE: test_SHT31.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo
 //     URL: https://github.com/RobTillaart/TwoWireSW
