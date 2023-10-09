@@ -1,0 +1,23 @@
+{
+  "name": "TwoWireSW",
+  "keywords": "I2C,SW",
+  "description": "TwoWire interface wrapper around SoftwareWire. (not working, under development)",
+  "authors":
+  [
+    {
+      "name": "Rob Tillaart",
+      "email": "Rob.Tillaart@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/RobTillaart/TwoWireSW.git"
+  },
+  "version": "0.1.0",
+  "license": "MIT",
+  "frameworks": "*",
+  "platforms": "AVR",
+  "headers": "TwoWireSW.h"
+}

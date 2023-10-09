@@ -2,23 +2,23 @@
 //
 //    FILE: TwoWireSW.h
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.0.0
+// VERSION: 0.0.1
 //    DATE: 2023-03-16
 // PURPOSE: TwoWire interface wrapper around SoftwareWire
 //     URL: https://github.com/RobTillaart/TwoWireSW
 //     URL: https://github.com/Testato/SoftwareWire
 
 
-
 //  NEED TO MAKE ALL TWOWIRE VIRTUAL
 //  SEE  - https://github.com/RobTillaart/TwoWireSW/issues/1
-
-
 
 
 #include "Arduino.h"
 #include "Wire.h"
 #include "SoftwareWire.h"
+
+
+#define TWOWIRESW_LIB_VERSION        (F("0.0.1 not working"))
 
 
 class TwoWireSW : public TwoWire
