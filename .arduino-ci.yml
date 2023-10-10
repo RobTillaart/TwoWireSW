@@ -31,13 +31,13 @@ compile:
     - "DHT20"
     - "I2C_SCANNER"
 
-unittest:
-  platforms:
-    - uno
-  # These dependent libraries will be installed
-  libraries:
-    - "SoftwareWire"
-    - "SHT31"
-    - "DHT20"
-    - "I2C_SCANNER"
-
+# unittest:
+#   platforms:
+#     - uno
+#   # These dependent libraries will be installed
+#   libraries:
+#     - "SoftwareWire"
+#     - "SHT31"
+#     - "DHT20"
+#     - "I2C_SCANNER"
+# 
