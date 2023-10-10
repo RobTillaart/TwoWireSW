@@ -32,6 +32,8 @@ compile:
     - "I2C_SCANNER"
 
 unittest:
+  platforms:
+    - uno
   # These dependent libraries will be installed
   libraries:
     - "SoftwareWire"
