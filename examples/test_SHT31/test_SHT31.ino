@@ -5,11 +5,8 @@
 //     URL: https://github.com/RobTillaart/TwoWireSW
 
 
-
 //  NEED TO MAKE ALL TWOWIRE VIRTUAL
 //  SEE  - https://github.com/RobTillaart/TwoWireSW/issues/1
-
-
 
 
 #include "TwoWireSW.h"
@@ -58,4 +55,4 @@ void loop()
 }
 
 
-// -- END OF FILE --
+//  -- END OF FILE --

@@ -2,7 +2,7 @@
 //    FILE: DHT20.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: Demo for DHT20 I2C humidity & temperature sensor
-//
+//     URL: https://github.com/RobTillaart/TwoWireSW
 
 
 //  NEED TO MAKE ALL TWOWIRE VIRTUAL
