@@ -1,7 +1,7 @@
 {
   "name": "TwoWireSW",
   "keywords": "I2C,SW",
-  "description": "TwoWire interface wrapper around SoftwareWire. (not working, under development)",
+  "description": "TwoWire interface wrapper around SoftwareWire. (not working, under development).",
   "authors":
   [
     {
